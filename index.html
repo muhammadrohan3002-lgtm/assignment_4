@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Tracker</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+
+  <!-- Dashboard -->
+  <section class="max-w-6xl mx-auto p-6">
+
+    <h1 class="text-3xl font-bold mb-6 text-center">
+      Job Application Tracker
+    </h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+
+      <div class="bg-white shadow p-6 rounded text-center">
+        <h2 class="text-gray-500">Total</h2>
+        <p id="totalCount" class="text-2xl font-bold">8</p>
+      </div>
+
+      <div class="bg-white shadow p-6 rounded text-center">
+        <h2 class="text-green-600">Interview</h2>
+        <p id="interviewCount" class="text-2xl font-bold text-green-600">0</p>
+      </div>
+
+      <div class="bg-white shadow p-6 rounded text-center">
+        <h2 class="text-red-600">Rejected</h2>
+        <p id="rejectedCount" class="text-2xl font-bold text-red-600">0</p>
+      </div>
+
+    </div>
+
+    <!-- Available Jobs Header -->
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold">Available Jobs</h2>
+      <span id="tabCount" class="text-gray-600">8 Jobs</span>
+    </div>
+
+    <!-- Tabs -->
+    <div class="flex gap-4 mb-6">
+      <button class="tab-btn bg-blue-500 text-white px-4 py-2 rounded" data-tab="all">All</button>
+      <button class="tab-btn bg-gray-300 px-4 py-2 rounded" data-tab="interview">Interview</button>
+      <button class="tab-btn bg-gray-300 px-4 py-2 rounded" data-tab="rejected">Rejected</button>
+    </div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden text-center py-10">
+      <div class="text-6xl mb-3">📂</div>
+      <h3 class="text-xl font-semibold">No Jobs Available</h3>
+      <p class="text-gray-500">You have not added any jobs to this section yet.</p>
+    </div>
+
+    <!-- Job Cards -->
+    <div id="jobContainer" class="grid grid-cols-1 md:grid-cols-1 gap-6"></div>
+
+  </section>
+
+  <script src="javaScript/script.js"></script>
+</body>
+</html>
